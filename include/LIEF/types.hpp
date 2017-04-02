@@ -19,4 +19,6 @@
 #include <inttypes.h>
 #include <cstddef>
 
+#define ALIGN(x) __attribute__ ((__aligned__(x), __packed__))
+
 #endif
