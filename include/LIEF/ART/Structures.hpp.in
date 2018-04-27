@@ -43,7 +43,7 @@ namespace LIEF {
 //! @brief Namespace related to the LIEF's ART module
 namespace ART {
 
-static constexpr uint8_t magic[] = { 'a', 'r', 't', '\n' };
+static const uint8_t magic[] = { 'a', 'r', 't', '\n' };
 static constexpr art_version_t art_version = 0;
 
 struct ALIGN(4) image_section_t {
