@@ -30,7 +30,7 @@ class LIEF_API Header : public Object {
   friend class Parser;
 
   public:
-  using magic_t = std::array<uint8_t, sizeof(magic)>;
+  using magic_t = std::array<uint8_t, 4>;
 
   Header(void);
 
