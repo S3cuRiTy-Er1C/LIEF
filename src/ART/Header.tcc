@@ -85,7 +85,7 @@ Header::Header(const T* header) :
   boot_oat_begin_{header->boot_oat_begin},
   boot_oat_size_{header->boot_oat_size},
   storage_mode_{static_cast<STORAGE_MODES>(header->storage_mode)},
-  data_size_{static_cast<STORAGE_MODES>(header->data_size)}
+  data_size_{header->data_size}
 {
   std::copy(
       std::begin(header->magic),
