@@ -62,11 +62,16 @@ void create<Class>(py::module& m) {
 
     .def_property_readonly("parent",
         static_cast<no_const_getter_t<Class&>>(&Class::parent),
-        "True if the current class extends another one")
+        "" RST_CLASS_REF(lief.DEX.Class) " parent class")
 
     .def_property_readonly("methods",
         static_cast<no_const_getter_t<it_methods>>(&Class::methods),
-        "Methods implemented in this class")
+        "Iterator over " RST_CLASS_REF(lief.DEX.Method) " implemented in this class")
+
+    .def("get_method",
+        static_cast<it_methods(Class::*)(const std::string&)>(&Class::methods),
+        "Iterator over " RST_CLASS_REF(lief.DEX.Method) " (s) having the given name",
+        "name"_a)
 
     .def_property_readonly("access_flags",
         static_cast<getter_t<Class::access_flags_list_t>>(&Class::access_flags),

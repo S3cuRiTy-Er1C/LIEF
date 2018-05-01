@@ -80,6 +80,10 @@ class LIEF_API Class : public Object {
   it_const_methods methods(void) const;
   it_methods methods(void);
 
+  //! Return Methods having the given name
+  it_methods methods(const std::string& name);
+  it_const_methods methods(const std::string& name) const;
+
   //! De-optimize information
   dex2dex_class_info_t dex2dex_info(void) const;
 
@@ -96,6 +100,7 @@ class LIEF_API Class : public Object {
   virtual ~Class(void);
 
   private:
+  methods_t method_from_name(const std::string& name) const;
 
   std::string fullname_;
   uint32_t    access_flags_;

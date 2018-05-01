@@ -54,7 +54,7 @@ class TestDEX35(TestCase):
         classes = self.kik_dex35.classes
         self.assertEqual(len(classes), 12123)
 
-        c0 = classes[100]
+        c0 = self.kik_dex35.get_class("android.graphics.drawable.ShapeDrawable")
         self.assertEqual(c0.pretty_name, "android.graphics.drawable.ShapeDrawable")
         self.assertEqual(len(c0.methods), 3)
 
@@ -85,7 +85,8 @@ class TestDEX35(TestCase):
 
         self.assertEqual(len(methods), 65254)
 
-        m0 = methods[100]
+        ValueAnimator = self.kik_dex35.get_class("android.animation.ValueAnimator")
+        m0 = ValueAnimator.get_method("setRepeatMode")[0]
 
         self.assertEqual(m0.name,            "setRepeatMode")
         self.assertEqual(m0.cls.pretty_name, "android.animation.ValueAnimator")

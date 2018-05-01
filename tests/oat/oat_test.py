@@ -109,7 +109,7 @@ class TestOAT64(TestCase):
         self.assertEqual(len(WallpaperCropper2.classes), 1992)
 
         # OAT Class 0
-        cls = WallpaperCropper2.classes[0]
+        cls = WallpaperCropper2.get_class("android.support.v4.widget.ViewDragHelper")
 
         self.assertEqual(cls.fullname, "Landroid/support/v4/widget/ViewDragHelper;")
         self.assertEqual(cls.index, 1066)
@@ -118,7 +118,7 @@ class TestOAT64(TestCase):
         self.assertEqual(cls.type, lief.OAT.OAT_CLASS_TYPES.SOME_COMPILED)
 
         # OAT Class 1
-        cls = WallpaperCropper2.classes[996]
+        cls = WallpaperCropper2.get_class("com.android.keyguard.KeyguardTransportControlView$SavedState$1")
 
         self.assertEqual(cls.fullname, "Lcom/android/keyguard/KeyguardTransportControlView$SavedState$1;")
         self.assertEqual(cls.index, 207)
@@ -127,7 +127,7 @@ class TestOAT64(TestCase):
         self.assertEqual(cls.type, lief.OAT.OAT_CLASS_TYPES.ALL_COMPILED)
 
         # OAT Class 2
-        cls = WallpaperCropper2.classes[1991]
+        cls = WallpaperCropper2.get_class("android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub")
 
         self.assertEqual(cls.fullname, "Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2Stub;")
         self.assertEqual(cls.index, 566)

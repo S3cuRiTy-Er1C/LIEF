@@ -157,6 +157,27 @@ it_methods Class::methods(void) {
   return this->methods_;
 }
 
+
+it_methods Class::methods(const std::string& name) {
+  return this->method_from_name(name);
+}
+
+it_const_methods Class::methods(const std::string& name) const {
+  return this->method_from_name(name);
+}
+
+methods_t Class::method_from_name(const std::string& name) const {
+  methods_t mtd;
+  std::copy_if(
+      std::begin(this->methods_),
+      std::end(this->methods_),
+      std::back_inserter(mtd),
+      [name] (const Method* m) {
+        return m->name() == name;
+      });
+  return mtd;
+}
+
 size_t Class::index(void) const {
   return this->original_index_;
 }
