@@ -21,6 +21,11 @@
 
 #include "LIEF/logging++.hpp"
 
+#if defined(_MSC_VER)
+#  include <intrin.h>
+#  define __builtin_popcount __popcnt
+#endif
+
 namespace LIEF {
 namespace OAT {
 

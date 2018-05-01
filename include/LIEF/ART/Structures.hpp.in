@@ -46,7 +46,7 @@ namespace ART {
 static constexpr uint8_t art_magic[]       = { 'a', 'r', 't', '\n' };
 static constexpr art_version_t art_version = 0;
 
-struct ALIGN(4) image_section_t {
+struct ALIGNED_(4) image_section_t {
   uint32_t offset;
   uint32_t size;
 };
@@ -64,7 +64,7 @@ static constexpr uint32_t nb_sections      = 5;
 static constexpr uint32_t nb_image_methods = 6;
 static constexpr uint32_t nb_image_roots   = 2;
 
-struct ALIGN(4) header {
+struct ALIGNED_(4) header {
   uint8_t magic[4];
   uint8_t version[4];
 
@@ -125,7 +125,7 @@ static constexpr uint32_t nb_sections      = 9;
 static constexpr uint32_t nb_image_methods = 6;
 static constexpr uint32_t nb_image_roots   = 2;
 
-struct ALIGN(4) header {
+struct ALIGNED_(4) header {
 
   uint8_t magic[4];
   uint8_t version[4];
@@ -209,7 +209,7 @@ static constexpr uint32_t nb_image_methods = 6;
 static constexpr uint32_t nb_image_roots   = 2;
 
 
-struct ALIGN(4) header {
+struct ALIGNED_(4) header {
 
   uint8_t magic[4];
   uint8_t version[4];
@@ -291,7 +291,7 @@ static constexpr uint32_t nb_image_methods = 7;
 static constexpr uint32_t nb_image_roots   = 3;
 
 
-struct ALIGN(4) header {
+struct ALIGNED_(4) header {
 
   uint8_t magic[4];
   uint8_t version[4];

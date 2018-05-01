@@ -57,14 +57,14 @@ struct jobject_t<no_brooks_read_barrier_t> {
   uint32_t         monitor;
 };
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jarray_t {
+struct ALIGNED_(4) jarray_t {
   jobject_t<T> object;
   int32_t   length;
   uint32_t* elements;
 };
 
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jclass_t {
+struct ALIGNED_(4) jclass_t {
   jobject_t<T>     object;
 
   heap_reference_t class_loader;
@@ -99,7 +99,7 @@ struct ALIGN(4) jclass_t {
 };
 
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jstring_t {
+struct ALIGNED_(4) jstring_t {
   jobject_t<T> object;
   int32_t      count;
   uint32_t     hash_code;
@@ -107,7 +107,7 @@ struct ALIGN(4) jstring_t {
 };
 
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jdex_cache_t {
+struct ALIGNED_(4) jdex_cache_t {
   jobject_t<T> object;
 
   heap_reference_t dex;
@@ -140,7 +140,7 @@ template<class T = no_brooks_read_barrier_t>
 using jarray_t = ART_17::Java::jarray_t<T>;
 
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jclass_t {
+struct ALIGNED_(4) jclass_t {
   jobject_t<T>     object;
 
   heap_reference_t annotation_type;           // ADDED in ART 29
@@ -185,7 +185,7 @@ template<class T = no_brooks_read_barrier_t>
 using jstring_t = ART_17::Java::jstring_t<T>;
 
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jdex_cache_t {
+struct ALIGNED_(4) jdex_cache_t {
   jobject_t<T> object;
 
   heap_reference_t dex;
@@ -258,7 +258,7 @@ template<class T = no_brooks_read_barrier_t>
 using jarray_t = ART_30::Java::jarray_t<T>;
 
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jclass_t {
+struct ALIGNED_(4) jclass_t {
   jobject_t<T>     object;
 
   // heap_reference_t annotation_type;        // REMOVED in ART 44
@@ -303,7 +303,7 @@ template<class T = no_brooks_read_barrier_t>
 using jstring_t = ART_30::Java::jstring_t<T>;
 
 template<class T = no_brooks_read_barrier_t>
-struct ALIGN(4) jdex_cache_t {
+struct ALIGNED_(4) jdex_cache_t {
   jobject_t<T> object;
 
   // heap_reference_t dex;                     // REMOVED in ART 44

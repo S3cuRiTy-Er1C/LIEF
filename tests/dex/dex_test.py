@@ -93,7 +93,7 @@ class TestDEX35(TestCase):
         self.assertEqual(m0.bytecode,        [])
         self.assertEqual(m0.index,           100)
         #self.assertEqual(m0.is_virtual,      False) # TODO
-        self.assertEqual(m0.prototype.return_type.value, lief.DEX.Type.PRIMITIVES.VOID)
+        self.assertEqual(m0.prototype.return_type.value, lief.DEX.Type.PRIMITIVES.VOID_T)
         self.assertEqual(m0.access_flags, [])
 
 
