@@ -295,6 +295,11 @@ std::string Type::pretty_name(PRIMITIVES p) {
       {
         return "void";
       }
+
+    default:
+      {
+        return "";
+      }
   }
 }
 

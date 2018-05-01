@@ -357,7 +357,6 @@ using jdex_cache_t = ART_44::Java::jdex_cache_t<T>;
 } // Namespace Java
 } // Namespace ART_46
 
-
 } // Namespace ART
 } // Namespace LIEF
 
