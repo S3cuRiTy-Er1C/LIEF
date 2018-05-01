@@ -35,7 +35,7 @@ class LIEF_API Type : public Object {
   };
 
   enum class PRIMITIVES {
-    VOID    = 0x01,
+    VOID_T  = 0x01,
     BOOLEAN = 0x02,
     BYTE    = 0x03,
     SHORT   = 0x04,

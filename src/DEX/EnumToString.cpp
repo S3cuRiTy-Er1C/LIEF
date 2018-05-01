@@ -89,7 +89,7 @@ const char* to_string(Type::TYPES  e) {
 
 const char* to_string(Type::PRIMITIVES  e) {
   CONST_MAP(Type::PRIMITIVES, const char*, 9) enumStrings {
-    { Type::PRIMITIVES::VOID,    "VOID"    },
+    { Type::PRIMITIVES::VOID_T,  "VOID_T"    },
     { Type::PRIMITIVES::BOOLEAN, "BOOLEAN" },
     { Type::PRIMITIVES::INT,     "INT"     },
     { Type::PRIMITIVES::SHORT,   "SHORT"   },

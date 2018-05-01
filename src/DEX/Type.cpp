@@ -106,7 +106,7 @@ void Type::parse(const std::string& type) {
     case 'V':
       {
         this->type_ = Type::TYPES::PRIMITIVE;
-        this->basic_ = new Type::PRIMITIVES{Type::PRIMITIVES::VOID};
+        this->basic_ = new Type::PRIMITIVES{Type::PRIMITIVES::VOID_T};
         break;
       }
 
@@ -291,7 +291,7 @@ std::string Type::pretty_name(PRIMITIVES p) {
         return "short";
       }
 
-    case PRIMITIVES::VOID:
+    case PRIMITIVES::VOID_T:
       {
         return "void";
       }

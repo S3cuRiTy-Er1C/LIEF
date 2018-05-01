@@ -47,7 +47,7 @@ void create<Type>(py::module& m) {
     .value(PY_ENUM(Type::TYPES::CLASS));
 
   py::enum_<Type::PRIMITIVES>(pytype, "PRIMITIVES")
-    .value(PY_ENUM(Type::PRIMITIVES::VOID))
+    .value(PY_ENUM(Type::PRIMITIVES::VOID_T))
     .value(PY_ENUM(Type::PRIMITIVES::BOOLEAN))
     .value(PY_ENUM(Type::PRIMITIVES::BYTE))
     .value(PY_ENUM(Type::PRIMITIVES::SHORT))
